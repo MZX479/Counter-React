@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Сount from "./components/counter";
 
-function App() {
+const App = () => {
+  const limit: 100 = 100;
+  const countData = Сount();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appWrapper">
+      <section className="mainContainer">
+        <div className="number">{countData.number}</div>
+        <section className="buttons">
+          <button
+            className="minusNumber"
+            onClick={countData.minusNumber}
+            disabled={countData.number <= 0}
+          >
+            -
+          </button>
+          <button className="plusTen" onClick={countData.clear}>
+            Clear
+          </button>
+          <button
+            className="plusNumber"
+            onClick={countData.plusNumber}
+            disabled={countData.number >= limit}
+          >
+            +
+          </button>
+        </section>
+      </section>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+html {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.number {
+  padding-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mainContainer {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  height: 50vh;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  flex-direction: column;
+}
+
+.minusNumber {
+  width: 80px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.minusNumber:not(:disabled):hover {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.minusNumber:not(:disabled):active {
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plusNumber {
+  width: 80px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.plusNumber:not(:disabled):hover {
+  background-color: black;
+  color: white;
+}
+
+.plusNumber:not(:disabled):active {
+  background-color: white;
+  color: black;
+}
+
+.plusTen {
+  width: 100px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.plusTen:not(:disabled):hover {
+  background-color: black;
+  color: white;
+}
+
+.plusTen:not(:disabled):active {
+  background-color: white;
+  color: black;
 }
