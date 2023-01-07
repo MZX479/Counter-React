@@ -1,24 +1,38 @@
 import { useState } from "react";
 
 const Сount = () => {
-  let [number, setNumber] = useState(0);
+  let [number, setNumber] = useState<number>(0);
+
+  if (number < 0 || number > 100) {
+    throw new Error("Unexpected number amount!");
+  }
 
   const plusNumber = () => {
-    setNumber(++number);
+    return setNumber(++number);
   };
 
   const minusNumber = () => {
-    setNumber(--number);
+    return setNumber(--number);
+  };
+
+  const plusTen = () => {
+    return setNumber((number += 10));
+  };
+
+  const minusTen = () => {
+    return setNumber((number -= 10));
   };
 
   const clear = () => {
-    setNumber(0);
+    return setNumber(0);
   };
 
   const data = {
     number,
     plusNumber,
     minusNumber,
+    plusTen,
+    minusTen,
     clear,
   };
 

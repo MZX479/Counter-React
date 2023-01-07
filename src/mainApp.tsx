@@ -1,7 +1,7 @@
 import "./App.css";
 import Сount from "./components/counter";
 
-const App = () => {
+const Counter = () => {
   const limit: 100 = 100;
   const countData = Сount();
   return (
@@ -16,7 +16,7 @@ const App = () => {
           >
             -
           </button>
-          <button className="plusTen" onClick={countData.clear}>
+          <button className="clear" onClick={countData.clear}>
             Clear
           </button>
           <button
@@ -27,9 +27,25 @@ const App = () => {
             +
           </button>
         </section>
+        <section className="aditionalButtons">
+          <button
+            className="minusTen"
+            onClick={countData.minusTen}
+            disabled={countData.number <= 0 + 10}
+          >
+            - 10
+          </button>
+          <button
+            className="plusTen"
+            onClick={countData.plusTen}
+            disabled={countData.number >= 100 - 10}
+          >
+            + 10
+          </button>
+        </section>
       </section>
     </div>
   );
 };
 
-export default App;
+export default Counter;
