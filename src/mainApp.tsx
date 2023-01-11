@@ -1,9 +1,9 @@
-import "./App.css";
-import Сount from "./components/counter";
+import "./main.css";
+import сount from "./components/counter";
 
 const Counter = () => {
   const limit: 100 = 100;
-  const countData = Сount();
+  const countData = сount();
   return (
     <div className="appWrapper">
       <section className="mainContainer">
